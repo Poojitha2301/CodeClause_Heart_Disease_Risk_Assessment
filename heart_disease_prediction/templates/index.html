@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Risk Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Disease Risk Prediction</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender (0 = Female, 1 = Male)</label>
+                <input type="number" id="gender" name="gender" required>
+            </div>
+            <div class="form-group">
+                <label for="blood_pressure">Blood Pressure</label>
+                <input type="number" id="blood_pressure" name="blood_pressure" required>
+            </div>
+            <div class="form-group">
+                <label for="cholesterol">Cholesterol</label>
+                <input type="number" id="cholesterol" name="cholesterol" required>
+            </div>
+            <div class="form-group">
+                <label for="resting_heart_rate">Resting Heart Rate</label>
+                <input type="number" id="resting_heart_rate" name="resting_heart_rate" required>
+            </div>
+            <div class="form-group">
+                <label for="smoking">Smoking (0 = No, 1 = Yes)</label>
+                <input type="number" id="smoking" name="smoking" required>
+            </div>
+            <div class="form-group">
+                <label for="diabetes">Diabetes (0 = No, 1 = Yes)</label>
+                <input type="number" id="diabetes" name="diabetes" required>
+            </div>
+            <div class="form-group">
+                <label for="physical_activity">Physical Activity Level (0-2)</label>
+                <input type="number" id="physical_activity" name="physical_activity" required>
+            </div>
+            <button type="submit">Predict Risk</button>
+        </form>
+
+        {% if risk_rate is not none %}
+            <div class="alert">
+                Predicted Risk Rate: {{ risk_rate | round(2) }}%
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

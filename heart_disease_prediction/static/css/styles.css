@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #6bb3d6; /* White background for form */
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    opacity: 0.95; /* Slight transparency */
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Dark color for heading */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin: 15px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555; /* Dark grey for labels */
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Transition for focus */
+}
+
+input[type="number"]:focus {
+    border-color: #6a11cb; /* Color on focus */
+    outline: none; /* Remove outline */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2575fc; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Transition for hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.alert {
+    background-color: #f8d7da; /* Light red for alerts */
+    color: #721c24; /* Dark red for text */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
